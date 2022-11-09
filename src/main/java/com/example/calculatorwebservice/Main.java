@@ -9,6 +9,5 @@ public class Main {
         System.out.println(facade.Multiply(12, 13));
         System.out.println(facade.Divide(12, 20));
         System.out.println(facade.Minus(100, 300));
-
     }
 }

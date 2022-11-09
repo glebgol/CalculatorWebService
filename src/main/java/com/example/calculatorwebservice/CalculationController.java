@@ -33,7 +33,7 @@ public class CalculationController {
         if (secondArg == 0) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
-        var result = firstArg - secondArg;
+        var result = firstArg / secondArg;
         return new ResponseEntity<Double>(result, HttpStatus.ACCEPTED);
     }
 }
