@@ -13,19 +13,19 @@ public class CalculationController {
     @GetMapping("add/{firstArg}/{secondArg}")
     public ResponseEntity<Double> Add(@PathVariable Double firstArg, @PathVariable Double secondArg) {
         var result = CalculationEngine.Add(firstArg, secondArg);
-        return new ResponseEntity<Double>(result, HttpStatus.ACCEPTED);
+        return new ResponseEntity<>(result, HttpStatus.OK);
     }
 
     @GetMapping("multiply/{firstArg}/{secondArg}")
     public ResponseEntity<Double> Multiply(@PathVariable Double firstArg, @PathVariable Double secondArg) {
         var result = CalculationEngine.Multiply(firstArg, secondArg);
-        return new ResponseEntity<Double>(result, HttpStatus.ACCEPTED);
+        return new ResponseEntity<>(result, HttpStatus.OK);
     }
 
     @GetMapping("minus/{firstArg}/{secondArg}")
     public ResponseEntity<Double> Minus(@PathVariable Double firstArg, @PathVariable Double secondArg) {
         var result = CalculationEngine.Minus(firstArg, secondArg);
-        return new ResponseEntity<Double>(result, HttpStatus.ACCEPTED);
+        return new ResponseEntity<>(result, HttpStatus.OK);
     }
 
     @GetMapping("divide/{firstArg}/{secondArg}")
@@ -36,6 +36,6 @@ public class CalculationController {
         } catch (IllegalArgumentException ex) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
-        return new ResponseEntity<Double>(result, HttpStatus.ACCEPTED);
+        return new ResponseEntity<>(result, HttpStatus.OK);
     }
 }
