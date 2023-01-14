@@ -1,4 +1,4 @@
-package com.example.calculatorwebservice;
+package com.glebgol.calculatorwebservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
