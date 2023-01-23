@@ -1,25 +1,14 @@
 package com.glebgol.calculatorwebservice.facade;
 
-import com.glebgol.calculatorwebservice.services.*;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
-
+@SpringBootTest
 class CalculationFacadeImplTest {
+    @Autowired
     CalculationFacade calculationFacade;
-    AdditionService additionService;
-    DivisionService divisionService;
-    MultiplyService multiplyService;
-    SubtractionService subtractionService;
-    @BeforeEach
-    public void setUp() {
-        additionService = new AdditionServiceImpl();
-        divisionService = new DivisionServiceImpl();
-        multiplyService = new MultiplyServiceImpl();
-        subtractionService = new SubtractionServiceImpl();
-        calculationFacade = new CalculationFacadeImpl(additionService, divisionService, multiplyService, subtractionService);
-    }
 
     @Test
     void add() {
